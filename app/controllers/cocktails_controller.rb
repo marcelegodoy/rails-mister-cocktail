@@ -21,7 +21,9 @@ class CocktailsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @cocktail = Cocktail.find(params[:id])
+  end
 
   def update
     @cocktail = Cocktail.find(params[:id])
